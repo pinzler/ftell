@@ -91,11 +91,7 @@ if (!isset($_SESSION['myid']))
 	    	$contact = $rowbig['email'];
 		$tells=$rowbig['tells'];
 		
-<<<<<<< HEAD
 		echo $friend." ".$contact." ".$tells."<BR>";
-=======
-		echo $friend." ".$contact." ".$tells."<BR>" ;
->>>>>>> fceab63b19ff4cec2cefc7ff37be8811e197fe9d
 
 		}
 
