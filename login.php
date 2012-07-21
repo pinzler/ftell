@@ -26,7 +26,7 @@ if (!isset($_SESSION['myid']))
 	
 	$key = $_REQUEST['code'];
 
-	$uri = file_get_contents("https://foursquare.com/oauth2/access_token?client_id=J0LRFXR1NYQYYWHGEDJJ0VIMMV101D422Q5ISF5L13RNQFQE&client_secret=HTDLG32GFDVDO5UL4KCYTKDXLPQQPC3TM0XAPRHJSCCEKFSO&grant_type=authorization_code&redirect_uri=http://fourtell.com/login.php&code=".$key, 
+	$uri = file_get_contents("https://foursquare.com/oauth2/access_token?client_id=J0LRFXR1NYQYYWHGEDJJ0VIMMV101D422Q5ISF5L13RNQFQE&client_secret=HTDLG32GFDVDO5UL4KCYTKDXLPQQPC3TM0XAPRHJSCCEKFSO&grant_type=authorization_code&redirect_uri=http://fourtell.co/login.php&code=".$key, 
 	    true);
 
 	$obj = json_decode($uri);// Convert JSON
@@ -79,7 +79,7 @@ if (!isset($_SESSION['myid']))
 	
 	$myid = $_SESSION['myid'];
 	
-	echo "Welcome ".$myid."<BR>";
+	echo "Hi ".$myid."<BR>";
 
 	$query = "select * from $tbl_tells where fsid = '$myid'";
 	$resultbig=mysql_query($query);
@@ -88,10 +88,10 @@ if (!isset($_SESSION['myid']))
 	    if ($rowbig['which'] == 'phone')
 	    	$contact = $rowbig['phone'];
 	    else
-	    	$contact = $rowbig['email']
+	    	$contact = $rowbig['email'];
 		$tells=$rowbig['tells'];
 		
-		echo $friend." ".$contact." ".$tells."<BR>"
+		echo $friend." ".$contact." ".$tells."<BR>";
 
 		}
 
