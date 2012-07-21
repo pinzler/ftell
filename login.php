@@ -88,10 +88,10 @@ if (!isset($_SESSION['myid']))
 	    if ($rowbig['which'] == 'phone')
 	    	$contact = $rowbig['phone'];
 	    else
-	    	$contact = $rowbig['email']
+	    	$contact = $rowbig['email'];
 		$tells=$rowbig['tells'];
 		
-		echo $friend." ".$contact." ".$tells."<BR>"
+		echo $friend." ".$contact." ".$tells."<BR>" ;
 
 		}
 
@@ -99,7 +99,7 @@ if (!isset($_SESSION['myid']))
 	echo "<BR><BR>Display add form<BR><BR>";
 	
 
-
+include "components/add-tells.php";
 include "footer.php";
 
 ?>
