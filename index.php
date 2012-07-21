@@ -3,7 +3,7 @@ include "header.php";
 ?>
 
 <div class="hero-unit">
-  <h1>FourTell</h1>
+  <h1 id="hmpg-logo">FourTell <img src="../assets/img/bullhorn.png"></h1>
   <h2>Bringing the check-in party to your luddite friends.</h2>
   <p>Get started now by connecting to your <i>foursquare<sup>&reg;</sup></i> account</p>
   <p>
@@ -17,6 +17,7 @@ include "header.php";
 </div>
 
 <?php
+include "components/instructions.php";
 include "components/add-tells.php";
 include "footer.php";
 ?>

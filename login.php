@@ -112,7 +112,9 @@ if (!isset($_SESSION['myid']))
 ?>
           </tbody>
       </table>
+      
 <?php
+include "components/instructions.php";
 include "footer.php";
 
 ?>

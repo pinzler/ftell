@@ -17,7 +17,28 @@
 	      body {
 	      	padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 	      	}
+	      	
 	      }
+	  @media screen and (min-width: 460px) {
+	      	#hmpg-logo img {height: 60px; width:78px; margin-top: -30px;}
+	      }
+	      
+	      #main-nav-logo img {width:20px; margin-top: -7px; }
+	      
+	      
+	      label.valid {
+    width: 24px;
+    height: 24px;
+    background: url(../assets/img/valid.png) center center no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    }
+    label.error {
+    font-weight: bold;
+    color: red;
+    padding: 2px 8px;
+    margin-top: 2px;
+    }
     </style>
     
 
@@ -44,7 +65,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>-->
           </a>
-          <a class="brand" href="/">FourTell</a>
+          <a id="main-nav-logo" class="brand" href="/">FourTell <img src="../assets/img/bullhorn-gray.png"></a>
           <div class="nav-collapse">
             <ul class="nav">
               <!--<li class="active"><a href="/">Home</a></li>
