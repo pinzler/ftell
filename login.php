@@ -41,6 +41,8 @@ if (!isset($_SESSION['myid']))
 
 	$_SESSION['myid'] = $obj->response->user->id;
 	$myid = $obj->response->user->id; 
+	$_SESSION['firstn'] = $obj->response->user->firstName; 
+	$firstn = $obj->response->user->firstName;
 
 	$sql="SELECT * FROM $tbl_name WHERE id='$myid'";
 	$result=mysql_query($sql);
@@ -78,9 +80,13 @@ if (!isset($_SESSION['myid']))
 }
 	
 	$myid = $_SESSION['myid'];
-	
-	echo "<h2 style='padding-bottom: 1em;'>Welcome ".$myid."</h2>";
+	$firstn = $_SESSION['firstn'];
+	echo "<h2 style='padding-bottom: 1em;'>Welcome ".$firstn."</h2>";
 	include "components/add-tells.php";
+	$query = "select * from $tbl_tells where fsid = '$myid'";
+	$resultbig=mysql_query($query);
+	$count2=mysql_num_rows($resultbig);
+	if ($count2<>0) {
 	?>
 	<table class="table table-striped table-bordered table-condensed">
         <thead>
@@ -95,8 +101,6 @@ if (!isset($_SESSION['myid']))
         <tbody>	
 <?php
 	$friendcount = 1;
-	$query = "select * from $tbl_tells where fsid = '$myid'";
-	$resultbig=mysql_query($query);
 	while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
 	    $friend = $rowbig['name'];
 	    if ($rowbig['which'] == 'phone')
@@ -114,6 +118,7 @@ if (!isset($_SESSION['myid']))
       </table>
       
 <?php
+}
 include "components/instructions.php";
 include "footer.php";
 
