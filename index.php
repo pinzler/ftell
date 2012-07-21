@@ -3,6 +3,36 @@ include "header.php";
 ?>
 
 <div class="hero-unit">
+	<div style="float:right">
+		<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 3,
+  interval: 30000,
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#f7f2f7',
+      color: '#0d010d'
+    },
+    tweets: {
+      background: '#000000',
+      color: '#cae6db',
+      links: '#4aed05'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    behavior: 'all'
+  }
+}).render().setUser('FourTell').start();
+</script>
+	</div>
   <h1 id="hmpg-logo">FourTell <img src="../assets/img/bullhorn.png"></h1>
   <h2>Bringing the check-in party to your luddite friends.</h2>
   <p>Get started now by connecting to your <i>foursquare<sup>&reg;</sup></i> account</p>
@@ -18,6 +48,5 @@ include "header.php";
 
 <?php
 include "components/instructions.php";
-include "components/add-tells.php";
 include "footer.php";
 ?>
