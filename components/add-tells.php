@@ -12,6 +12,6 @@
     This is a cell phone number
   </label>
   <label>Enter the Tell groups for this friend. Must be entered as #hashtags separated by commas</label>
-  <input type="text" class="span3" placeholder="#example, #example2…">
-  <button type="submit" class="btn">Submit</button>
+  <input type="text" class="span3" placeholder="#example, #example2…"><br>
+  <button type="submit" class="btn btn-success">Submit</button>
 </form>
