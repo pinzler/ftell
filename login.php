@@ -79,7 +79,8 @@ if (!isset($_SESSION['myid']))
 	
 	$myid = $_SESSION['myid'];
 	
-	echo "<h2>Welcome ".$myid."</h2>";
+	echo "<h2 style='padding-bottom: 1em;'>Welcome ".$myid."</h2>";
+	include "components/add-tells.php";
 	?>
 	<table class="table table-striped table-bordered table-condensed">
         <thead>
@@ -112,7 +113,6 @@ if (!isset($_SESSION['myid']))
           </tbody>
       </table>
 <?php
-include "components/add-tells.php";
 include "footer.php";
 
 ?>
