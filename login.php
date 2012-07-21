@@ -79,10 +79,6 @@ if (!isset($_SESSION['myid']))
 	
 	$myid = $_SESSION['myid'];
 	
-<<<<<<< HEAD
-	echo "Hi ".$myid."<BR>";
-
-=======
 	echo "<h2>Welcome ".$myid."</h2>";
 	?>
 	<table class="table table-striped table-bordered table-condensed">
@@ -97,7 +93,6 @@ if (!isset($_SESSION['myid']))
         <tbody>	
 <?php
 	$friendcount = 1;
->>>>>>> No message
 	$query = "select * from $tbl_tells where fsid = '$myid'";
 	$resultbig=mysql_query($query);
 	while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
@@ -107,14 +102,9 @@ if (!isset($_SESSION['myid']))
 	    else
 	    	$contact = $rowbig['email'];
 		$tells=$rowbig['tells'];
-		
-<<<<<<< HEAD
-		echo $friend." ".$contact." ".$tells."<BR>";
 
-=======
 		echo "<tr><td>".$friendcount."</td><td>".$friend."</td><td>".$contact."</td><td>".$tells."</td></tr><td><a href='/components/updateTable.php?adddel=del&friend=".$friend."'>Delete</a></td></tr>" ;
 		$friendcount++;
->>>>>>> No message
 		}
 	
 ?>
