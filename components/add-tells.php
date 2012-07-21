@@ -13,12 +13,12 @@
 		<div class="accordion-inner">
 			<form id="tells-form" class="form-horizontal" name="tellsform" action="components/updateTable.php" method="get">
 				<div class="control-group">
-					<label>Enter your friend's name. Warning: This is how they will be addressed in emails.</label>
+					<label>Friend's name. Warning: This is how they will be addressed in emails. Only use names you'd say to their face.</label>
 					<input type="text" name="friend" id="friend" class="span3" placeholder="Friend's name…">
 				</div>
 				<div class="control-group">
-					<label>Enter the email or cell phone # to use. Just use numbers</label>
-					<input type="text" name="contact" id="contact" class="span3" placeholder="example@example.com or 6666666666">
+					<label>Enter the email or cell phone # (If using cell, numbers only. No dashes or parentheses) to use. If you send text messages, they will come from (216) 503-TELL.</label>
+					<input type="text" name="contact" id="contact" placeholder="example@example.com or 6666666666">
 				</div>
 				<div class="control-group">
 					<label class="radio">

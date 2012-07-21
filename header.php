@@ -39,6 +39,7 @@
     padding: 2px 8px;
     margin-top: 2px;
     }
+    #twitter-widget p {font-size:14px !important;}
     </style>
     
 

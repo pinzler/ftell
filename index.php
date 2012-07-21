@@ -1,15 +1,16 @@
 <?php 
 include "header.php";
 ?>
-
-<div class="hero-unit">
-	<div style="float:right">
+<div class="row">
+  <div class="span12">
+  <div class="hero-unit">
+	<div id="twitter-widget" class="hidden-phone" style="float:right">
 		<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
 new TWTR.Widget({
   version: 2,
   type: 'profile',
-  rpp: 3,
+  rpp: 2,
   interval: 30000,
   width: 250,
   height: 300,
@@ -39,7 +40,9 @@ new TWTR.Widget({
   <p>
     <a class="btn btn-large" href="https://foursquare.com/oauth2/authenticate?client_id=J0LRFXR1NYQYYWHGEDJJ0VIMMV101D422Q5ISF5L13RNQFQE&response_type=code&redirect_uri=http://fourtell.co/login.php"><img alt="Foursquare" src="https://playfoursquare.s3.amazonaws.com/press/logo/connect-blue.png"></a>
   </p>
+  <p style="clear:both; line-height:1px; padding:0; margin:0;"></p>
 </div>
+  </div></div>
 
 <div class="well">
 	<h2>What is FourTell?</h2>
