@@ -79,8 +79,20 @@ if (!isset($_SESSION['myid']))
 	
 	$myid = $_SESSION['myid'];
 	
-	echo "Hi ".$myid."<BR>";
-
+	echo "<h2>Welcome ".$myid."</h2>";
+	?>
+	<table class="table table-striped table-bordered table-condensed">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Friend Name</th>
+            <th>Contact Info</th>
+            <th>Tells</th>
+          </tr>
+        </thead>
+        <tbody>	
+<?php
+	$friendcount = 1;
 	$query = "select * from $tbl_tells where fsid = '$myid'";
 	$resultbig=mysql_query($query);
 	while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
@@ -90,15 +102,15 @@ if (!isset($_SESSION['myid']))
 	    else
 	    	$contact = $rowbig['email'];
 		$tells=$rowbig['tells'];
-		
-		echo $friend." ".$contact." ".$tells."<BR>";
 
+		echo "<tr><td>".$friendcount."</td><td>".$friend."</td><td>".$contact."</td><td>".$tells."</td></tr><td><a href='/components/updateTable.php?adddel=del&friend=".$friend."'>Delete</a></td></tr>" ;
+		$friendcount++;
 		}
-
 	
-	echo "<BR><BR>Display add form<BR><BR>";
-	
-
+?>
+          </tbody>
+      </table>
+<?php
 include "components/add-tells.php";
 include "footer.php";
 
