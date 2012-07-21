@@ -1,4 +1,4 @@
-<form class="well" name="tellsform" action="http://fourtell.co/components/updateTable.php" method="post">
+<form class="well" name="tellsform" action="http://fourtell.co/components/updateTable.php" method="get">
   <label>Add a new friend</label>
   <input type="text" name="friend" class="span3" placeholder="Friend's name…">
   <label>Enter the email or cell phone # to use. Just use numbers</label>

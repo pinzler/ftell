@@ -15,6 +15,11 @@ mysql_connect("$host", "$username", "$password")or die("cannot connect");
 mysql_select_db("$db_name")or die("cannot select DB");
 
 
+	$fsid = $_SESSION['myid'];
+	$friend = $_REQUEST['friend'];
+	$which = $_REQUEST['optionsRadios'];
+	
+
 if ($_REQUEST['adddel'] == 'add')
 {
 	$fsid = $_SESSION['myid'];
@@ -31,10 +36,10 @@ if ($_REQUEST['adddel'] == 'add')
 		$email = $_REQUEST['contact'];		
 	}
 
-	$_REQUEST['tells'];
+	$tells = $_REQUEST['tells'];
 
 
-$sql2="INSERT INTO $tbl_tells (fsid, name, which, email, phone, tells) VALUES ('$fsid', '$friend', '$which', '$phone', '$email');";
+$sql2="INSERT INTO $tbl_tells (fsid, name, which, phone, email, tells) VALUES ('$fsid', '$friend', '$which', '$phone', '$email', '$tells');";
 $result2=mysql_query($sql2);
 
 }
