@@ -79,6 +79,8 @@ if (!isset($_SESSION['myid']))
 	
 	$myid = $_SESSION['myid'];
 	
+	echo "Welcome ".$myid."<BR>";
+
 	$query = "select * from $tbl_tells where fsid = '$myid'";
 	$resultbig=mysql_query($query);
 	while($rowbig = mysql_fetch_array($resultbig, MYSQL_ASSOC)) {
