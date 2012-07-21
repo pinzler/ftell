@@ -88,6 +88,7 @@ if (!isset($_SESSION['myid']))
             <th>Friend Name</th>
             <th>Contact Info</th>
             <th>Tells</th>
+            <th>Edit</th>
           </tr>
         </thead>
         <tbody>	
@@ -103,7 +104,7 @@ if (!isset($_SESSION['myid']))
 	    	$contact = $rowbig['email'];
 		$tells=$rowbig['tells'];
 
-		echo "<tr><td>".$friendcount."</td><td>".$friend."</td><td>".$contact."</td><td>".$tells."</td></tr><td><a href='/components/updateTable.php?adddel=del&friend=".$friend."'>Delete</a></td></tr>" ;
+		echo "<tr><td>".$friendcount."</td><td>".$friend."</td><td>".$contact."</td><td>".$tells."</td><td><a href='/components/updateTable.php?adddel=del&friend=".$friend."'>Remove</a></td></tr>" ;
 		$friendcount++;
 		}
 	
