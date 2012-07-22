@@ -1,6 +1,0 @@
-<div class="well well-medium">
-  	<h3>Need ideas how to use this?</h3>
-  	<p><strong>Say you're out for the night and end up at a concert.</strong> You're already checking in to the venue on foursquare and you want to tell some friends who get excited about live music. Instead of sending a text message to all of them, let FourTell do it instead. If you create a #livemusic group and add your friends, they'll get a text message or email whenever you check in with that hashtag.</p>
-  	<p><strong>Say you find a shoe sale.</strong> You've got friends who would bum rush a shoe sale like there's no tomorrow, but they don't use foursquare and you have to start trying on shoes asap. No time to call them? No worries. Just create a #shoesale group and use that when you check in. Share that sale!</p>
-  	<p><strong>Say you accidentally hit on a biker's lady.</strong> That's no good. Check in with your group #personalbodyguards and your posse can come get your back when you're asking if you can have three steps towards the door. Disclaimer: not responsible if you get your ass kicked before your posse arrives.</p>
-</div>
